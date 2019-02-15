@@ -1,0 +1,36 @@
+{
+  "name": "app_background",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzxfjmc/app_background.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hzxfjmc/app_background/issues"
+  },
+  "homepage": "https://github.com/hzxfjmc/app_background#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.6.5",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^4.42.0",
+    "sequelize-typescript": "^0.6.7"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.39",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  }
+}
