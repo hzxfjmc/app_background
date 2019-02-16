@@ -5,9 +5,9 @@ const path = require('path');
 const db =  new Sequelize({
   database: 'blog',
   dialect: 'mysql',
+  host:'101.132.116.101',
   username: 'root',
   port:3306,
-  // modelPaths: [path.resolve(__dirname, `./models/${mysqlConfig.modelPath}`)],
   password: '123456',
   pool: {
     max: 5,
@@ -16,8 +16,6 @@ const db =  new Sequelize({
     idle: 10000
   },
 });
-console.log("db")
-console.log(path.resolve(__dirname,))
+
 db.addModels([Animal])
-console.log("dbend")
 export default db;

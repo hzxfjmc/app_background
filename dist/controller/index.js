@@ -5,6 +5,7 @@ class User {
     constructor() { }
     async createUserInfo(ctx) {
         db_1.default;
+        console.log(ctx.query);
     }
 }
 exports.User = User;

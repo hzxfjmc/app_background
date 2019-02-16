@@ -6,9 +6,9 @@ const path = require('path');
 const db = new sequelize_typescript_1.Sequelize({
     database: 'blog',
     dialect: 'mysql',
+    host: '101.132.116.101',
     username: 'root',
     port: 3306,
-    // modelPaths: [path.resolve(__dirname, `./models/${mysqlConfig.modelPath}`)],
     password: '123456',
     pool: {
         max: 5,
@@ -17,9 +17,6 @@ const db = new sequelize_typescript_1.Sequelize({
         idle: 10000
     },
 });
-console.log("db");
-console.log(path.resolve(__dirname));
 db.addModels([animal_1.Animal]);
-console.log("dbend");
 exports.default = db;
 //# sourceMappingURL=db.js.map
