@@ -33,4 +33,4 @@ Animal = __decorate([
     })
 ], Animal);
 exports.Animal = Animal;
-//# sourceMappingURL=animal.js.map
+//# sourceMappingURL=Animal.js.map
