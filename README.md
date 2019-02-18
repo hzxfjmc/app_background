@@ -5,3 +5,9 @@ koa2项目的搭建：
     2.安装项目依赖：npm i koa2
 demo1
     sequelize-typescript的使用:
+
+
+
+数据库初始化：
+ yarn sqlinit 
+

@@ -1,3 +1,4 @@
-import db from './db';
-db.Instance
-db.sync();
+import { InitDbConfig } from './db';
+const InitDb = new InitDbConfig();
+InitDb.db.sync();
+

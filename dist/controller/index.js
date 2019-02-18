@@ -14,15 +14,9 @@ class User {
     createUserInfo(ctx) {
         return __awaiter(this, void 0, void 0, function* () {
             ctx.body = ctx.request.body;
-            let res = yield UserInfo_1.UserInfo.create({ name: 'azu', sex: 4 });
+            UserInfo_1.UserInfo.create({ name: "xiejin", sex: 0 });
+            let res = yield UserInfo_1.UserInfo.findAll();
             console.log(res);
-            // db.sync({force: true})
-            // .then(() => Promise.all([
-            //   UserInfo.create<UserInfo>({name: 'azu',sex:1}),
-            //   UserInfo.create<UserInfo>({name: 'nelly',sex:0}),
-            //   UserInfo.create<UserInfo>({name: 'elisa',sex:0})
-            // ])
-            // )
         });
     }
 }
