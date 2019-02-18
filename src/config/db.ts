@@ -1,6 +1,6 @@
 
 import {Sequelize} from 'sequelize-typescript';
-
+const path = require("path");
 export class InitDbConfig{
   db:any
   constructor(){
@@ -18,7 +18,7 @@ export class InitDbConfig{
         idle: 10000
       },
       modelPaths: [
-        __dirname + '/models'
+        path.resolve(__dirname,'../models')
       ],
       define: {
         underscored: false,

@@ -13,9 +13,12 @@ class User {
     constructor() { }
     createUserInfo(ctx) {
         return __awaiter(this, void 0, void 0, function* () {
-            ctx.body = ctx.request.body;
-            UserInfo_1.UserInfo.create({ name: "xiejin", sex: 0 });
-            let res = yield UserInfo_1.UserInfo.findAll();
+            let res = yield UserInfo_1.UserInfo.findAll({
+                where: {
+                    name: 'xiejin1'
+                }
+            });
+            ctx.body = res;
             console.log(res);
         });
     }

@@ -3,9 +3,12 @@ import { UserInfo } from "../models/UserInfo";
 export class User {
     constructor(){}
     public async createUserInfo(ctx:any){
-      ctx.body = ctx.request.body;
-      UserInfo.create({name:"xiejin",sex:0})
-      let res = await UserInfo.findAll();
+      let res:any = await UserInfo.findAll({
+        where:{
+          name:'xiejin1'
+        }
+      });
+      ctx.body = res;
       console.log(res);
     }
 } 

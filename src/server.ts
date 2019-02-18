@@ -1,7 +1,7 @@
 
 import * as Koa from 'koa';
 const app = new Koa();
-import { InitDbConfig } from './db';
+import { InitDbConfig } from './config/db';
 const bodyParser = require('koa-bodyparser');
 import router from "./routers/index"
 
