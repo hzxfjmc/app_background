@@ -1,5 +1,6 @@
 
 import {Sequelize} from 'sequelize-typescript';
+const path = require('path');
 const db =  new Sequelize({
   database: 'blog',
   dialect: 'mysql',
@@ -15,7 +16,11 @@ const db =  new Sequelize({
   },
   modelPaths: [
     __dirname + '/models'
-  ]
+  ],
+  define: {
+    underscored: true,
+    freezeTableName: true,
+    timestamps: true
+  }
 });
-
 export default db;

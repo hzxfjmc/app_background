@@ -21,6 +21,7 @@
   "homepage": "https://github.com/hzxfjmc/app_background#readme",
   "dependencies": {
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "mysql2": "^1.6.5",
     "reflect-metadata": "^0.1.13",

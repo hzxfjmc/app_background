@@ -1,9 +1,9 @@
 import * as Router from 'koa-router';
 const router = new Router();
-import UserInfo  from "../controller/index";
+import UserData  from "../controller/index";
 
-router.get('/getUerInfo',async (ctx,nex)=>{
-   await UserInfo.createUserInfo(ctx)
+router.post('/login',async (ctx,next)=>{
+   await UserData.createUserInfo(ctx)
 });
 
 export default router;
