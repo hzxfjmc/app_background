@@ -1,5 +1,5 @@
 
-import {Sequelize} from 'sequelize-typescript';
+import { Sequelize } from 'sequelize-typescript';
 const path = require("path");
 export class InitDbConfig{
   db:any
@@ -27,9 +27,4 @@ export class InitDbConfig{
       }
     });
   }
-  public InitConfig(){
-
-  }
 }
-// const db =  
-// export default db;

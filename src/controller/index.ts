@@ -5,11 +5,22 @@ export class User {
     public async createUserInfo(ctx:any){
       let res:any = await UserInfo.findAll({
         where:{
-          name:'xiejin1'
+          name:ctx.request.body.name
         }
       });
-      ctx.body = res;
-      console.log(res);
+      if(res.length == 0){
+        UserInfo.create(ctx.request.body);
+        ctx.body = {
+          code:200,
+          msg:'注册成功'
+        }
+      }else{
+        ctx.body = {
+          code:200,
+          data:res[0],
+          msg:'该用户已经注册'
+        }
+      }
     }
 } 
 const UserData = new User();

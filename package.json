@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/hzxfjmc/app_background#readme",
   "dependencies": {
+    "jsonwebtoken": "^8.4.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
+    "koa-jwt": "^3.5.1",
     "koa-router": "^7.4.0",
     "mysql2": "^1.6.5",
     "reflect-metadata": "^0.1.13",
