@@ -1,5 +1,7 @@
 
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const util = require('util')
+const verify = util.promisify(jwt.verify) // 解密
 import { UserInfo } from "../models/UserInfo";
 export class User {
     constructor(){}
@@ -43,12 +45,20 @@ export class User {
         code:400,
         msg:"登录失败",
       } 
-      const token = jwt.sign(res[0].toJSON(), "shared-secret", {expiresIn: '1h'})  //token签名 有效期为1小时
+      const token = jwt.sign(res[0].toJSON(), "token", {expiresIn: '4h'})  //token签名 有效期为1小时
       ctx.body = {
         code:200,
         msg:"登录成功",
         token:token
       }
+    }
+
+    public async getUserInfo(ctx:any){
+      const token = ctx.header.authorization;
+      // console.log(token);
+
+      let res = jwt.verify(token.split(" ")[1], "token");
+      ctx.body = res;
     }
 } 
 const UserData = new User();

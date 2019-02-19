@@ -13,5 +13,8 @@ router.post('/api/login',async (ctx,next)=>{
 });
 
 /**获取个人信息 */
+router.get('/api/get_user_info',async (ctx,next)=>{
+   await UserData.getUserInfo(ctx)
+});
 
 export default router;
