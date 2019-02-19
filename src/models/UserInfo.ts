@@ -12,9 +12,15 @@ export class UserInfo extends Model<UserInfo> {
 
   @Column({
     type: DataType.STRING,
-    comment:"文章标题"
+    comment:"姓名"
   })
   name: string
+
+  @Column({
+    type: DataType.STRING,
+    comment:"密码"
+  })
+  password: string
 
   @Column({
     type: DataType.INTEGER,

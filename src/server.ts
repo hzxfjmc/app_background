@@ -5,7 +5,7 @@ import router from "./routers/index"
 const bodyParser = require('koa-bodyparser');
 const app = new Koa();
 const jwtkoa = require('koa-jwt');
-const jwt = require('jsonwebtoken')
+
 
 app.use(function (ctx, next) {
     return next().catch((err) => {
@@ -16,14 +16,15 @@ app.use(function (ctx, next) {
             msg:"token已失效"
         };
         } else {
-        throw err;
+            throw err;
         }
     });
 });
+app.use(jwtkoa({ secret: 'shared-secret' }).unless({ path: [/^\/api\/login/,/^\/api\/register/] }));
 new InitDbConfig();
 app.use(bodyParser());
 app.use(router.routes())
 app.listen(3000);
-app.use(jwtkoa({ secret: 'shared-secret' }).unless({ path: [/^\/login/,/^\/register/] }));
+
 
 
