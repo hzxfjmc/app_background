@@ -22,10 +22,13 @@
   "dependencies": {
     "jsonwebtoken": "^8.4.0",
     "koa": "^2.7.0",
+    "koa-body": "^4.0.8",
     "koa-bodyparser": "^4.2.1",
     "koa-jwt": "^3.5.1",
     "koa-router": "^7.4.0",
     "mysql2": "^1.6.5",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^4.42.0",
     "sequelize-typescript": "^0.6.7"

@@ -12,7 +12,7 @@ export class User {
         }
       });
       if(res.length == 0){
-        if(ctx.request.body.name != undefined && ctx.request.body.password !=undefined){
+        if(ctx.request.body.name != undefined && ctx.request.body.password !=undefined && ctx.request.body.sex != undefined && ctx.request.body.avata != undefined){
           UserInfo.create(ctx.request.body);
           ctx.body = {
             code:200,
@@ -55,8 +55,6 @@ export class User {
 
     public async getUserInfo(ctx:any){
       const token = ctx.header.authorization;
-      // console.log(token);
-
       let res = jwt.verify(token.split(" ")[1], "token");
       ctx.body = res;
     }
