@@ -27,7 +27,8 @@ app.use(async (ctx, next)=>{
         }
     });
 });
-// app.use(jwtkoa({ secret: 'token'}).unless({ path: [/^\/api\/login/,/^\/api\/register/,/^\/public\/upload/]}));
+
+app.use(jwtkoa({ secret: 'token'}).unless({ path: [/^\/api\/login/,/^\/api\/register/,/^\/public/]}));
 new InitDbConfig();
 app.use(bodyParser());
 
